@@ -16,6 +16,6 @@ public class Employee {
     private String name;
     private String email;
 
-    @OneToMany
+    @OneToMany(mappedBy = "employee",cascade = CascadeType.ALL)
     private List<Leave> leaves = new ArrayList<Leave>();
 }
