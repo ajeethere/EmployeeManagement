@@ -18,4 +18,6 @@ public class Employee {
 
     @OneToMany(mappedBy = "employee",cascade = CascadeType.ALL)
     private List<Leave> leaves = new ArrayList<>();
+    @OneToMany(mappedBy = "employee",cascade = CascadeType.ALL)
+    private List<Salary> salaries = new ArrayList<>();
 }

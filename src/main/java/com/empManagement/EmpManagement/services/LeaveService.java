@@ -19,4 +19,5 @@ public class LeaveService {
     public List<Leave> getAllLeaves() {
         return leavesRepo.findAll();
     }
+
 }

@@ -23,4 +23,12 @@ public class EmployeeService {
     public Optional<Employee> getEmployeeById(Long employeeId) {
         return employeeRepository.findById(employeeId);
     }
+
+    public void deleteEmployee(Long employeeId) {
+        employeeRepository.deleteById(employeeId);
+    }
+
+    public void updateEmployee(Employee employee) {
+        employeeRepository.save(employee);
+    }
 }
