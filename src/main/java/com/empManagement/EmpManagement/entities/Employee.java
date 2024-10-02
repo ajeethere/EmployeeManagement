@@ -15,6 +15,7 @@ public class Employee {
     private Long id;
     private String name;
     private String email;
+    private Double salary;
 
     @OneToMany(mappedBy = "employee",cascade = CascadeType.ALL)
     private List<Leave> leaves = new ArrayList<>();

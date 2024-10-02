@@ -4,7 +4,7 @@ import lombok.Data;
 
 @Data
 public class TdoEmpSalary {
-    private String salary;
+    private Double salary;
     private String date;
     private Long empId;
 }

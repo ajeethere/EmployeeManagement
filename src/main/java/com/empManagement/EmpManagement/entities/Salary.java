@@ -12,7 +12,8 @@ public class Salary {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String salary;
+    private Double salary;
+    private Double increaseDecreaseSalary;
     private String date;
 
     @ManyToOne

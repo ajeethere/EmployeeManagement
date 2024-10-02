@@ -31,4 +31,7 @@ public class EmployeeService {
     public void updateEmployee(Employee employee) {
         employeeRepository.save(employee);
     }
+    public void updateEmployeeSalary(Long id, Double salary) {
+        employeeRepository.updateSalary(salary, id);
+    }
 }
