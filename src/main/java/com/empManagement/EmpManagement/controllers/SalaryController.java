@@ -48,4 +48,10 @@ public class SalaryController {
         return salaryService.getAllSalary();
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> deleteSalary(@PathVariable Long id) {
+        salaryService.deleteSalary(id);
+        return ResponseEntity.ok("Salary deleted successfully");
+    }
+
 }

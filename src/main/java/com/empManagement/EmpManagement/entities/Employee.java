@@ -29,6 +29,15 @@ public class Employee {
     @JsonIgnore
     private Team team;
 
+
+    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @JoinTable(
+            name = "employee_table_projects", // name of the join table
+            joinColumns = @JoinColumn(name = "employees_id"), // FK to Employee
+            inverseJoinColumns = @JoinColumn(name = "projects_id") // FK to Project
+    )
+    private List<Project> projects = new ArrayList<>();
+
     @JsonProperty("team")
     private String getTeam() {
         return team!=null?team.getTeamName():null;

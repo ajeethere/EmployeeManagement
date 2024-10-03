@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
-import java.util.Optional;
 
 @Component
 public class SalaryService {
@@ -21,4 +20,7 @@ public class SalaryService {
         return salaryRepository.findAll();
     }
 
+    public void deleteSalary(Long id) {
+        salaryRepository.deleteById(id);
+    }
 }
